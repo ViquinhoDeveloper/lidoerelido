@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viquinho System</title>
-  <style>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Viquinho System logo</title>
+<style>
     * {
       box-sizing: border-box;
     }
@@ -13,14 +13,14 @@
       padding: 0;
       background: #000;
       font-family: 'Courier New', Courier, monospace;
-      color: #0f0;
+      color: #00ff00;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
     }
     .container {
       display: flex;
@@ -31,66 +31,76 @@
     }
     .logo {
       position: relative;
-      width: 200px;
-      height: 200px;
-      border: 4px solid #0f0;
+      width: 190px;
+      height: 190px;
+      border: 3.5px solid #00ff00;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.2);
-      animation: pulse 2.5s infinite alternate ease-in-out;
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.45), inset 0 0 20px rgba(0, 255, 0, 0.3);
+      animation: pulse 2.4s infinite alternate ease-in-out;
     }
     .logo span {
-      font-size: 150px;
+      font-size: 135px;
       font-weight: 300;
       line-height: 0.8;
-      color: #0f0;
+      color: #00ff00;
       user-select: none;
-      transform: translateY(-4px);
+      transform: translateY(-2px);
+      text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
     }
     .status-area {
-      margin-top: 40px;
+      margin-top: 45px;
       min-height: 120px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
     .msg {
       opacity: 0;
       transform: translateY(6px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      letter-spacing: 2px;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
     .msg.visible {
       opacity: 1;
       transform: translateY(0);
     }
     #msg-loading {
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-size: 18px;
+      color: #00ff00;
+      letter-spacing: 4px;
     }
     #msg-security {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: normal;
-      color: #7cfc00;
-      letter-spacing: 1.5px;
+      color: #00ff00;
+      letter-spacing: 2.5px;
+      opacity: 0;
+    }
+    #msg-security.visible {
+      opacity: 0.85;
     }
     #msg-redirect {
-      font-size: 15px;
-      color: #39ff14;
-      font-style: italic;
+      font-size: 13px;
+      font-weight: normal;
+      color: #00ff00;
+      letter-spacing: 2px;
+      font-style: normal;
     }
     .cursor {
       display: inline-block;
       width: 8px;
-      height: 16px;
-      background-color: #0f0;
-      margin-left: 5px;
+      height: 15px;
+      background-color: #00ff00;
+      margin-left: 6px;
       vertical-align: middle;
-      animation: blink 0.8s infinite;
+      box-shadow: 0 0 8px #00ff00;
+      animation: blink 0.7s infinite;
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
@@ -98,64 +108,76 @@
     }
     @keyframes pulse {
       0% {
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.25), inset 0 0 15px rgba(0, 255, 0, 0.15);
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.3), inset 0 0 12px rgba(0, 255, 0, 0.2);
+        border-color: #00ff00;
       }
       100% {
-        box-shadow: 0 0 30px rgba(0, 255, 0, 0.6), inset 0 0 25px rgba(0, 255, 0, 0.4);
+        box-shadow: 0 0 35px rgba(0, 255, 0, 0.75), inset 0 0 25px rgba(0, 255, 0, 0.5);
+        border-color: #39ff14;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <span>V</span>
-    </div>
+<div class="container">
+<div class="logo">
+<span>V</span>
+</div>
+<div class="status-area">
+<!-- 1. LOADING... (surge suavemente aos 2.5s) -->
+<div class="msg" id="msg-loading">LOADING...</div>
+<!-- 2. CHECKING SECURITY... (surge aos 7.5s no total: +5.0s após loading) -->
+<div class="msg" id="msg-security">CHECKING SECURITY...</div>
+<!-- 3. REDIRECTING... (surge aos 10.5s no total: +3.0s após security) -->
+<div class="msg" id="msg-redirect">REDIRECTING...<span class="cursor"></span></div>
+</div>
+</div>
+<script>
+    // =========================================================================
+    // CONFIGURAÇÃO DE DESTINO:
+    // Altere a URL abaixo para o destino desejado (ex.: plataforma Lido e Relido)
+    // =========================================================================
+    const REDIRECT_URL = "https://www.google.com";
 
-    <div class="status-area">
-      <!-- 1. loading... (depois de 2.5s) -->
-      <div id="msg-loading" class="msg">loading...</div>
+    // Cronograma rigoroso com base no carregamento da página:
+    // T = 0.0s  -> Carrega página com o logo 'V' pulsando em neon verde (#00ff00)
+    // T = 2.5s  -> Exibe "LOADING..."
+    // T = 7.5s  -> (+5.0s) Exibe "CHECKING SECURITY..."
+    // T = 10.5s -> (+3.0s) Exibe "REDIRECTING..." com cursor piscante
+    // T = 12.0s -> (+1.5s) Executa o redirecionamento final com segurança
 
-      <!-- 2. checking security... (5s após loading) -->
-      <div id="msg-security" class="msg">checking security...</div>
+    const TIME_LOADING   = 2500;  // 2.5s
+    const TIME_SECURITY  = 7500;  // 2.5s + 5.0s = 7.5s total
+    const TIME_REDIRECT  = 10500; // 7.5s + 3.0s = 10.5s total
+    const TIME_EXECUTE   = 12000; // 10.5s + 1.5s = 12.0s total
 
-      <!-- 3. redirecting... (3s após checking security) -->
-      <div id="msg-redirect" class="msg">redirecting...<span class="cursor"></span></div>
-    </div>
-  </div>
-
-  <script>
-    // Defina o link de redirecionamento aqui:
-const REDIRECT_URL = "page.html";
-window.location.replace(REDIRECT_URL);
-
-
-    // 1. Ao entrar na página, após 2.5 segundos (2500ms): mostra "loading..."
-    setTimeout(() => {
-      document.getElementById('msg-loading').classList.add('visible');
-
-      // 2. Depois de mais 5 segundos (5000ms): mostra "checking security..."
+    window.addEventListener('DOMContentLoaded', () => {
+      // 1. Aos 2.5s: Exibe "LOADING..."
       setTimeout(() => {
-        document.getElementById('msg-security').classList.add('visible');
+        const loadingEl = document.getElementById('msg-loading');
+        if (loadingEl) loadingEl.classList.add('visible');
+      }, TIME_LOADING);
 
-        // 3. Depois de mais 3 segundos (3000ms): mostra "redirecting..."
-        setTimeout(() => {
-          document.getElementById('msg-redirect').classList.add('visible');
+      // 2. Aos 7.5s (após mais 5.0s): Exibe "CHECKING SECURITY..."
+      setTimeout(() => {
+        const securityEl = document.getElementById('msg-security');
+        if (securityEl) securityEl.classList.add('visible');
+      }, TIME_SECURITY);
 
-          // 4. Depois de mais 1.5 segundos (1500ms): redireciona
-          setTimeout(() => {
-            if (REDIRECT_URL && REDIRECT_URL !== "#") {
-              window.location.href = REDIRECT_URL;
-            } else {
-              console.log("Redirecionamento acionado para:", REDIRECT_URL);
-            }
-          }, 1500);
+      // 3. Aos 10.5s (após mais 3.0s): Exibe "REDIRECTING..."
+      setTimeout(() => {
+        const redirectEl = document.getElementById('msg-redirect');
+        if (redirectEl) redirectEl.classList.add('visible');
+      }, TIME_REDIRECT);
 
-        }, 3000);
-
-      }, 5000);
-
-    }, 2500);
+      // 4. Aos 12.0s (após mais 1.5s): Efetua o redirecionamento
+      setTimeout(() => {
+        if (REDIRECT_URL && REDIRECT_URL !== "#" && REDIRECT_URL.trim() !== "") {
+          window.location.href = REDIRECT_URL;
+        } else {
+          console.log("[Viquinho System] Redirecionamento simulado para:", REDIRECT_URL);
+        }
+      }, TIME_EXECUTE);
+    });
   </script>
-</body>
-</html>
+</body></html>
