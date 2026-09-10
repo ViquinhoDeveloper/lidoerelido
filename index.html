@@ -1,552 +1,161 @@
-<!DOCTYPE html><html class="dark" lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#00daf3", "tertiary-fixed": "#ffd6ff", "surface": "#10131a", "on-secondary-fixed-variant": "#582a9f", "secondary": "#d4bbff", "on-primary-fixed-variant": "#004f58", "primary": "#c3f5ff", "on-secondary": "#400688", "on-secondary-fixed": "#260058", "surface-bright": "#363941", "tertiary-container": "#fbbbff", "on-primary-fixed": "#001f24", "on-tertiary": "#570067", "on-primary-container": "#00626e", "error": "#ffb4ab", "surface-variant": "#32353d", "inverse-primary": "#006875", "surface-container-highest": "#32353d", "primary-fixed-dim": "#00daf3", "outline-variant": "#3b494c", "tertiary": "#ffe5fc", "secondary-fixed-dim": "#d4bbff", "surface-container-low": "#191b23", "on-surface": "#e1e2ec", "on-tertiary-fixed-variant": "#7b0090", "secondary-container": "#582a9f", "on-surface-variant": "#bac9cc", "on-secondary-container": "#c6a5ff", "primary-fixed": "#9cf0ff", "on-tertiary-fixed": "#350040", "primary-container": "#00e5ff", "on-error-container": "#ffdad6", "on-error": "#690005", "surface-container": "#1d1f27", "secondary-fixed": "#ebdcff", "on-primary": "#00363d", "error-container": "#93000a", "on-background": "#e1e2ec", "on-tertiary-container": "#9800b3", "outline": "#849396", "surface-dim": "#10131a", "inverse-on-surface": "#2d3038", "surface-container-high": "#272a32", "surface-container-lowest": "#0b0e15", "background": "#10131a", "inverse-surface": "#e1e2ec", "tertiary-fixed-dim": "#f8acff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-2xs": "0.25rem", "margin-mobile": "1rem", "gutter-desktop": "1.5rem", "margin-tablet": "2rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-sm": "0.75rem", "margin-desktop": "3rem", "space-xs": "0.5rem", "space-3xl": "4.5rem", "space-2xl": "3rem", "space-lg": "1.5rem" }, "fontFamily": { "body-sm": ["Hanken Grotesk", "sans-serif"], "headline-sm": ["Sora", "sans-serif"], "headline-lg": ["Sora", "sans-serif"], "display-lg-mobile": ["Sora", "sans-serif"], "headline-lg-mobile": ["Sora", "sans-serif"], "display-lg": ["Sora", "sans-serif"], "label-md": ["JetBrains Mono", "monospace"], "body-md": ["Hanken Grotesk", "sans-serif"], "body-lg": ["Hanken Grotesk", "sans-serif"], "headline-md": ["Sora", "sans-serif"], "label-sm": ["JetBrains Mono", "monospace"], "label-lg": ["JetBrains Mono", "monospace"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><main class="w-full bg-background min-h-screen relative overflow-hidden"><div class="pointer-events-none fixed top-0 left-1/4 w-96 h-96 bg-primary-container/10 blur-[120px] rounded-full -z-10"></div><div class="pointer-events-none fixed bottom-1/3 right-10 w-80 h-80 bg-secondary-container/20 blur-[140px] rounded-full -z-10"></div><div class="flex flex-col w-full">
-<!-- Dynamic Glow Ambience (Contained) -->
-<div class="relative w-full overflow-hidden">
-<!-- Radiant Hero Section -->
-<section class="relative w-full px-margin-mobile md:px-margin-tablet xl:px-margin-desktop pt-space-xl pb-space-3xl flex flex-col items-center justify-center text-center">
-<!-- Glow Underlay -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-r from-primary-container/20 via-secondary/20 to-tertiary-fixed-dim/15 blur-[120px] pointer-events-none rounded-full"></div>
-<!-- Badge Neon -->
-
-<!-- Main Headline with Cyber Gradient -->
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg font-bold tracking-tight text-on-surface max-w-5xl">
-<span class="bg-gradient-to-r from-primary-container via-primary to-secondary bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(0,229,255,0.35)]">
-          Lido e Relido
-        </span>
-</h1>
-<p class="mt-space-md max-w-3xl font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-        A iniciativa inovadora que transforma estantes paradas em pontes de conhecimento. No Colégio Stella Maris, unimos economia circular, sustentabilidade e inovação sob a guarda afetuosa de <strong class="text-primary-fixed font-semibold">Fibo</strong>, o cão-robô mais leitor da escola.
-      </p>
-<!-- Action Buttons -->
-
-<!-- Quick Impact Telemetry Cards -->
-<div class="w-full max-w-5xl mt-space-3xl grid grid-cols-1 md:grid-cols-3 gap-space-md text-left">
-<!-- Stat Card 1 -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/75 backdrop-blur-xl shadow-xl flex flex-col justify-between group hover:bg-surface-container/85 transition-all">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label-sm text-label-sm text-surface-tint uppercase tracking-widest font-semibold">Volume Circulante</span>
-<span class="p-space-2xs rounded-lg bg-surface-variant text-primary-fixed material-symbols-outlined text-[20px]">auto_stories</span>
-</div>
-<div class="font-display-lg text-headline-lg font-bold text-on-surface flex items-baseline gap-space-xs">
-<span id="counter-livros" class="">240</span><span class="text-primary-container">+</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Livros escolares e literários disponíveis para troca contínua.</p>
-<div class="w-full bg-surface-variant h-1.5 rounded-full mt-space-md overflow-hidden">
-<div class="bg-gradient-to-r from-primary-container to-secondary h-full w-4/5 rounded-full"></div>
-</div>
-</div>
-<!-- Stat Card 2 -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/75 backdrop-blur-xl shadow-xl flex flex-col justify-between group hover:bg-surface-container/85 transition-all">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Comunidade Ativa</span>
-<span class="p-space-2xs rounded-lg bg-surface-variant text-secondary material-symbols-outlined text-[20px]">group_add</span>
-</div>
-<div class="font-display-lg text-headline-lg font-bold text-on-surface flex items-baseline gap-space-xs">
-<span id="counter-leitores" class="">100%</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Engajamento dos estudantes da Turma 5A e turmas parceiras.</p>
-<div class="w-full bg-surface-variant h-1.5 rounded-full mt-space-md overflow-hidden">
-<div class="bg-gradient-to-r from-secondary to-tertiary-container h-full w-full rounded-full"></div>
-</div>
-</div>
-<!-- Stat Card 3 -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/75 backdrop-blur-xl shadow-xl flex flex-col justify-between group hover:bg-surface-container/85 transition-all">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-widest font-semibold">Patrulha Cibernética</span>
-<span class="p-space-2xs rounded-lg bg-surface-variant text-tertiary-fixed-dim material-symbols-outlined text-[20px]">pets</span>
-</div>
-<div class="font-display-lg text-headline-lg font-bold text-on-surface flex items-baseline gap-space-xs">
-<span class="">FIBO</span><span class="font-label-md text-label-md text-primary-container ml-space-xs">V.1.0 OS</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Cão-robô programado para premiar e saudar leitores bem-sucedidos.</p>
-<div class="w-full bg-surface-variant h-1.5 rounded-full mt-space-md overflow-hidden">
-<div class="bg-primary-container h-full w-5/6 rounded-full animate-pulse"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Interactive Section: Fibo Showcase Spotlight -->
-
-<!-- SECTION 2: COMO TROCAR (6 STEPS) -->
-<section class="w-full px-margin-mobile md:px-margin-tablet xl:px-margin-desktop py-space-3xl" id="como-trocar">
-<div class="flex flex-col items-center text-center mb-space-2xl">
-<span class="font-label-sm text-label-sm text-surface-tint uppercase tracking-widest font-semibold mb-space-xs">Protocolo Oficial do Colégio Stella Maris</span>
-<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
-          Como Trocar Seu Livro em <span class="bg-gradient-to-r from-primary-container to-secondary bg-clip-text text-transparent">6 Passos Fáceis</span>
-</h2>
-<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant max-w-2xl">
-          Siga o fluxo planejado pela equipe de fiscalização e administração do projeto para garantir uma circulação justa, divertida e acolhedora.
-        </p>
-</div>
-<!-- 6-Step Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
-<!-- Step 1 -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container-high/80 transition-all group">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="w-10 h-10 rounded-xl bg-primary-container/15 text-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center">01</span>
-<span class="material-symbols-outlined text-primary-container text-[26px]">shelves</span>
-</div>
-<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary-container transition-colors">
-              Escolha na sua Estante
-            </h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-              Dê uma boa olhada nos livros que você já leu e amou. Escolha um exemplar que esteja em excelente estado de conservação e pronto para encantar outro colega.
-            </p>
-</div>
-<div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary-container font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]">check_circle</span> Livro selecionado com carinho
-          </div>
-</div>
-<!-- Step 2 -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container-high/80 transition-all group">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="w-10 h-10 rounded-xl bg-secondary/15 text-secondary font-label-lg text-label-lg font-bold flex items-center justify-center">02</span>
-<span class="material-symbols-outlined text-secondary text-[26px]">balance</span>
-</div>
-<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-secondary transition-colors">
-              Avalie a Equivalência
-            </h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-              Considere o tipo e valor literário da obra (gibi, literatura juvenil, romance ou conto clássico) para garantir uma troca equilibrada e benéfica para todos.
-            </p>
-</div>
-<div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]">check_circle</span> Critério de valor justo
-          </div>
-</div>
-<!-- Step 3 -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container-high/80 transition-all group">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="w-10 h-10 rounded-xl bg-tertiary-container/20 text-tertiary-fixed font-label-lg text-label-lg font-bold flex items-center justify-center">03</span>
-<span class="material-symbols-outlined text-tertiary-fixed text-[26px]">place</span>
-</div>
-<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-tertiary-fixed transition-colors">
-              Ponto Oficial de Troca
-            </h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-              Leve o seu livro até a bancada oficial do projeto montada no Colégio Stella Maris nos intervalos e horários divulgados pela Turma 5A.
-            </p>
-</div>
-<div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-tertiary-fixed font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]">check_circle</span> Posto Stella Maris 5A
-          </div>
-</div>
-<!-- Step 4 -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container-high/80 transition-all group">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="w-10 h-10 rounded-xl bg-primary-fixed/20 text-primary font-label-lg text-label-lg font-bold flex items-center justify-center">04</span>
-<span class="material-symbols-outlined text-primary text-[26px]">menu_book</span>
-</div>
-<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
-              Explore Novas Histórias
-            </h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-              Navegue pelo catálogo físico disponível. Escolha um novo livro instigante, misterioso ou divertido que você ainda nunca tenha lido.
-            </p>
-</div>
-<div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]">check_circle</span> Descoberta de novo título
-          </div>
-</div>
-<!-- Step 5 -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container-high/80 transition-all group">
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="w-10 h-10 rounded-xl bg-surface-variant text-on-surface-variant font-label-lg text-label-lg font-bold flex items-center justify-center">05</span>
-<span class="material-symbols-outlined text-surface-tint text-[26px]">assignment_turned_in</span>
-</div>
-<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-surface-tint transition-colors">
-              Validação &amp; Registro
-            </h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-              Apresente sua troca para os fiscais e administradores (Francisco e Bruno). Eles farão o carimbo e o cômputo da circulação no livro de registros.
-            </p>
-</div>
-<div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-surface-tint font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px]">check_circle</span> Fiscalização aprovada
-          </div>
-</div>
-<!-- Step 6 (MOMENTO ESPECIAL FIBO) -->
-<div class="p-space-xl rounded-2xl bg-gradient-to-br from-surface-container-high via-surface-container-low to-secondary-container/30 backdrop-blur-xl shadow-[0_0_30px_rgba(0,229,255,0.2)] flex flex-col justify-between relative overflow-hidden group">
-<div class="absolute -top-6 -right-6 w-24 h-24 bg-primary-container/20 rounded-full blur-xl pointer-events-none"></div>
-<div>
-<div class="flex items-center justify-between mb-space-md">
-<span class="w-10 h-10 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center shadow-[0_0_12px_rgba(0,229,255,0.6)]">06</span>
-<span class="px-space-xs py-space-2xs rounded-full bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider animate-pulse">Momento Especial!</span>
-</div>
-<h3 class="font-headline-md text-headline-md font-bold text-primary-fixed">
-              Interação com o Fibo! 🐶🤖
-            </h3>
-<p class="font-body-md text-body-md text-on-surface mt-space-sm leading-relaxed">
-              Com a troca aprovada, você conquista o passe VIP para acariciar, ver truques mecânicos e testar os comandos especiais do cão-robô Fibo operado por Lucca!
-            </p>
-</div>
-<div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary-container font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-[18px]">military_tech</span> Recompensa máxima desbloqueada!
-          </div>
-</div>
-</div>
-</section>
-<!-- SECTION 3: ESTADO DO LIVRO PARA A TROCA -->
-<section class="w-full px-margin-mobile md:px-margin-tablet xl:px-margin-desktop py-space-3xl" id="criterios-de-conservacao">
-<div class="w-full rounded-3xl bg-surface-container-lowest/80 backdrop-blur-2xl p-space-lg md:p-space-2xl shadow-2xl">
-<div class="text-center max-w-3xl mx-auto mb-space-2xl">
-<div class="inline-flex items-center gap-space-2xs px-space-md py-space-2xs rounded-full bg-surface-variant font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs">
-<span class="material-symbols-outlined text-[16px] text-primary-container">rule</span>
-            Controle de Qualidade
-          </div>
-<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
-            Critérios de Conservação do Livro
-          </h2>
-<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant">
-            Para que todos recebam leituras prazerosas e limpas, nossos fiscais de projeto realizam uma triagem atenta. Veja o que é bem-vindo e o que não poderá ser aceito.
-          </p>
-</div>
-<!-- Acceptance Columns -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
-<!-- PERMITIDO / BEM-VINDO -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/90 shadow-xl flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-md mb-space-lg">
-<div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary-container flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.3)]">
-<span class="material-symbols-outlined text-[28px]">thumb_up</span>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md font-bold text-primary-fixed">Permitido • Bem-vindo</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Padrão de qualidade aprovado pelo Fibo</p>
-</div>
-</div>
-<div class="space-y-space-md">
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">check_circle</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Páginas íntegras e completas</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Todas as folhas de leitura e ilustrações sem rasgos ou faltas.</p>
-</div>
-</div>
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">check_circle</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Capas e lombadas firmes</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Capa preservada, encadernação sem descolamento ou fita crepe excessiva.</p>
-</div>
-</div>
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">check_circle</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Limpo, seco e sem mofo</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Armazenamento adequado, sem odores fortes de umidade ou fungos.</p>
-</div>
-</div>
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">check_circle</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Dedicatórias amigáveis</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Assinatura do antigo dono na primeira folha de rosto é aceita normalmente!</p>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-space-lg p-space-md rounded-xl bg-surface-container-high/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-primary-container uppercase font-semibold">Status de Fiscalização</span>
-<span class="px-space-sm py-space-2xs rounded-full bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm font-semibold">100% Apto para Troca</span>
-</div>
-</div>
-<!-- NÃO ACEITO -->
-<div class="p-space-xl rounded-2xl bg-surface-container-low/90 shadow-xl flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-md mb-space-lg">
-<div class="w-12 h-12 rounded-xl bg-error/20 text-error flex items-center justify-center shadow-[0_0_20px_rgba(255,180,171,0.2)]">
-<span class="material-symbols-outlined text-[28px]">block</span>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md font-bold text-error">Não Aceito para Troca</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Exemplares que necessitam de descarte/reciclagem</p>
-</div>
-</div>
-<div class="space-y-space-md">
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-error text-[20px] mt-0.5">cancel</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Páginas rasgadas ou ausentes</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Histórias que perderam o clímax ou páginas arrancadas que impeçam a leitura.</p>
-</div>
-</div>
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-error text-[20px] mt-0.5">cancel</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Danos graves por água ou mofo</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Folhas coladas por umidade, mofo ativo que possa contaminar outros livros.</p>
-</div>
-</div>
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-error text-[20px] mt-0.5">cancel</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Rabiscos que cobrem o texto</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Pichações de caneta, marca-texto excessivo que torne o texto ilegível.</p>
-</div>
-</div>
-<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container/50">
-<span class="material-symbols-outlined text-error text-[20px] mt-0.5">cancel</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Didáticos antigos ou apostilas preenchidas</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Materiais de exercícios escolares descartáveis já resolvidos.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-space-lg p-space-md rounded-xl bg-surface-container-high/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-error uppercase font-semibold">Alerta do Fibo</span>
-<span class="px-space-sm py-space-2xs rounded-full bg-error-container/40 text-error font-label-sm text-label-sm font-semibold">Retido na Triagem</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 4: BENEFÍCIOS E PROBLEMAS QUE O PROJETO RESOLVE -->
-<section class="w-full px-margin-mobile md:px-margin-tablet xl:px-margin-desktop py-space-3xl" id="impacto-e-beneficios">
-<div class="flex flex-col items-center text-center mb-space-2xl">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold mb-space-xs">Impacto Social &amp; Ambiental</span>
-<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
-          Desafios Reais &amp; <span class="bg-gradient-to-r from-secondary to-primary-container bg-clip-text text-transparent">Nossas Soluções</span>
-</h2>
-<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant max-w-2xl">
-          Como o Lido e Relido atua diretamente nos obstáculos do cotidiano escolar, substituindo gastos e desinteresse por cooperação e curiosidade.
-        </p>
-</div>
-<!-- Problem vs Solution Comparison Matrix -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
-<!-- Problems Column -->
-<div class="p-space-xl rounded-3xl bg-surface-container-low/60 shadow-xl space-y-space-lg">
-<div class="flex items-center gap-space-sm pb-space-sm border-b border-outline-variant/20">
-<span class="material-symbols-outlined text-error text-[28px]">warning</span>
-<div>
-<h3 class="font-headline-md text-headline-md font-bold text-on-surface">O Problema Identificado</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Cenário comum nas casas e escolas</p>
-</div>
-</div>
-<div class="space-y-space-md">
-<div class="p-space-md rounded-2xl bg-surface-container/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-outline text-[22px] mt-1">inventory_2</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Livros parados acumulando poeira</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Obras incríveis lidas apenas uma vez ficam esquecidas nos armários sem cumprir seu papel propagador de histórias.</p>
-</div>
-</div>
-<div class="p-space-md rounded-2xl bg-surface-container/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-outline text-[22px] mt-1">payments</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Custo elevado de novos livros</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Livros infanto-juvenis e paradidáticos novos possuem custo alto, limitando a variedade de leitura das famílias.</p>
-</div>
-</div>
-<div class="p-space-md rounded-2xl bg-surface-container/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-outline text-[22px] mt-1">screen_lock_portrait</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Desestímulo e competição com telas</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">A leitura tradicional por vezes é percebida como maçante diante de celulares, tablets e jogos digitais.</p>
-</div>
-</div>
-<div class="p-space-md rounded-2xl bg-surface-container/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-outline text-[22px] mt-1">delete_forever</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Descarte indevido de papel</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Livros muitas vezes são jogados no lixo comum ao invés de serem recirculados ou reciclados com dignidade.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Solutions Column -->
-<div class="p-space-xl rounded-3xl bg-surface-container/70 shadow-[0_0_30px_rgba(0,229,255,0.12)] space-y-space-lg">
-<div class="flex items-center gap-space-sm pb-space-sm border-b border-outline-variant/20">
-<span class="material-symbols-outlined text-primary-container text-[28px]">eco</span>
-<div>
-<h3 class="font-headline-md text-headline-md font-bold text-primary-fixed">A Solução Lido e Relido</h3>
-<p class="font-label-sm text-label-sm text-surface-tint">Ação prática e inovadora da Turma 5A</p>
-</div>
-</div>
-<div class="space-y-space-md">
-<div class="p-space-md rounded-2xl bg-surface-container-high/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-primary-container text-[22px] mt-1">recycling</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Economia Circular &amp; Sustentabilidade</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ao trocar, cada livro ganha nova vida útil. Menos desmatamento, menor pegada de carbono e mais respeito aos recursos naturais.</p>
-</div>
-</div>
-<div class="p-space-md rounded-2xl bg-surface-container-high/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-secondary text-[22px] mt-1">volunteer_activism</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Acesso Ilimitado a Custo Zero</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Democratização real: você entrega um livro lido e leva outro de forma 100% gratuita, sem nenhum tipo de barreira financeira.</p>
-</div>
-</div>
-<div class="p-space-md rounded-2xl bg-surface-container-high/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-primary-container text-[22px] mt-1">smart_toy</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Estímulo Lúdico com Fibo</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">O cão-robô Fibo conecta o fascínio pela tecnologia à magia dos livros, motivando até os alunos mais resistentes a ler mais.</p>
-</div>
-</div>
-<div class="p-space-md rounded-2xl bg-surface-container-high/60 flex items-start gap-space-sm">
-<span class="material-symbols-outlined text-tertiary-fixed text-[22px] mt-1">groups</span>
-<div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">Comunidade Escolar Unida</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Estimula a conversa entre colegas: "Você leu esse livro? Me conta o que achou!", fortalecendo os vínculos sociais.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 5: EQUIPE E CRÉDITOS OFICIAIS -->
-<section class="w-full px-margin-mobile md:px-margin-tablet xl:px-margin-desktop py-space-3xl mb-space-xl" id="equipe-e-creditos">
-<div class="w-full rounded-3xl bg-surface-container-lowest p-space-lg md:p-space-2xl shadow-2xl relative overflow-hidden">
-<div class="absolute top-0 right-0 w-80 h-80 bg-secondary/10 blur-[100px] pointer-events-none"></div>
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl pb-space-lg border-b border-outline-variant/20 gap-space-md">
-<div>
-<div class="inline-flex items-center gap-space-2xs px-space-md py-space-2xs rounded-full bg-secondary-container/30 font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider mb-space-xs">
-<span class="material-symbols-outlined text-[16px]">stars</span>
-              Ficha Técnica • Colégio Stella Maris
-            </div>
-<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">
-              Equipe &amp; Créditos Oficiais
-            </h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
-              O projeto Lido e Relido foi idealizado, desenhado, fiscalizado e operado com orgulho pelos alunos da Turma 5A com orientação pedagógica.
-            </p>
-</div>
-<div class="flex items-center gap-space-sm bg-surface-container-high/80 px-space-md py-space-xs rounded-xl self-start md:self-auto">
-<span class="material-symbols-outlined text-primary-container text-[20px]">school</span>
-<span class="font-label-md text-label-md text-primary-fixed uppercase">Turma: 5º Ano A</span>
-</div>
-</div>
-<!-- Team Credits Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
-<!-- Vicente Bajay (Core Developer & Maker) -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
-<div>
-<div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary-container flex items-center justify-center mb-space-md shadow-[0_0_16px_rgba(0,229,255,0.3)]">
-<span class="material-symbols-outlined text-[26px]">code</span>
-</div>
-<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Desenvolvimento &amp; Robô</span>
-<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-space-2xs">Vicente Bajay</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
-                Responsável pelo desenvolvimento do site, aquisição/montagem dos materiais e construção física do cão-robô Fibo.
-              </p>
-</div>
-<div class="mt-space-md pt-space-sm flex flex-wrap gap-1">
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Site Dev</span>
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Materiais</span>
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Cachorro Robô</span>
-</div>
-</div>
-<!-- Lucca Buss (Robot Controller & Pilot) -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
-<div>
-<div class="w-12 h-12 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center mb-space-md shadow-[0_0_16px_rgba(179,136,255,0.3)]">
-<span class="material-symbols-outlined text-[26px]">sports_esports</span>
-</div>
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Operações &amp; Piloto</span>
-<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-space-2xs">Lucca Buss</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
-                Operador e piloto oficial do cão-robô Fibo, controlando comandos motores, danças e interações com os alunos durante as trocas.
-              </p>
-</div>
-<div class="mt-space-md pt-space-sm flex flex-wrap gap-1">
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-secondary">Controle do Robô</span>
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Comandos VIP</span>
-</div>
-</div>
-<!-- Bruno Salbego (Administration) -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
-<div>
-<div class="w-12 h-12 rounded-xl bg-surface-variant text-surface-tint flex items-center justify-center mb-space-md">
-<span class="material-symbols-outlined text-[26px]">manage_accounts</span>
-</div>
-<span class="font-label-sm text-label-sm text-surface-tint uppercase tracking-wider font-semibold">Gestão &amp; Logística</span>
-<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-space-2xs">Bruno Salbego</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
-                Liderança na administração geral do projeto, escala dos plantões, organização da bancada de atendimento e livro de registros.
-              </p>
-</div>
-<div class="mt-space-md pt-space-sm flex flex-wrap gap-1">
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Administração</span>
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Logística</span>
-</div>
-</div>
-<!-- Francisco Del Prato (Inspection & Quality) -->
-<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-xl flex flex-col justify-between hover:bg-surface-container transition-all">
-<div>
-<div class="w-12 h-12 rounded-xl bg-surface-variant text-tertiary-fixed flex items-center justify-center mb-space-md">
-<span class="material-symbols-outlined text-[26px]">policy</span>
-</div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider font-semibold">Controle de Qualidade</span>
-<h3 class="font-headline-md text-headline-md font-bold text-on-surface mt-space-2xs">Francisco Del Prato</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
-                Chefe de fiscalização dos exemplares, verificando a integridade física das páginas, capa e autorizando a liberação do selo de troca.
-              </p>
-</div>
-<div class="mt-space-md pt-space-sm flex flex-wrap gap-1">
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-tertiary-fixed">Fiscalização</span>
-<span class="px-space-xs py-space-2xs rounded bg-surface-variant font-label-sm text-label-sm text-on-surface">Curadoria</span>
-</div>
-</div>
-</div>
-<!-- Pedagogical Guidance Banner -->
-<div class="mt-space-xl p-space-lg rounded-2xl bg-surface-container-high/70 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-space-md">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-12 rounded-xl bg-tertiary-container/30 text-tertiary-fixed flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[28px]">psychology</span>
-</div>
-<div>
-<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider font-semibold">Orientação Pedagógica</span>
-<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Professor Murilo</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Supervisão acadêmica, metodologia de incentivo à leitura e mentoria do projeto.</p>
-</div>
-</div>
-<div class="flex items-center gap-space-xs text-right">
-<div class="px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
-              Colégio Stella Maris • 2024
-            </div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<!-- Interactive JavaScript for Live Demonstration -->
-<script>
-    function triggerFiboReaction(type) {
-      const consoleMsg = document.getElementById('fibo-console-msg');
-      if (!consoleMsg) return;
-
-      if (type === 'latir') {
-        consoleMsg.textContent = '> [AU AU BIONICO] Fibo acenou a cabeça e aprovou seu livro!';
-      } else if (type === 'dancar') {
-        consoleMsg.textContent = '> [MODO FESTA] Fibo girou 360° com as luzes azuis e roxas!';
-      }
-
-      consoleMsg.classList.add('scale-105', 'text-secondary');
-      setTimeout(() => {
-        consoleMsg.classList.remove('scale-105', 'text-secondary');
-      }, 1500);
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viquinho System</title>
+  <style>
+    * {
+      box-sizing: border-box;
     }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .logo {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 4px solid #0f0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.2);
+      animation: pulse 2.5s infinite alternate ease-in-out;
+    }
+    .logo span {
+      font-size: 150px;
+      font-weight: 300;
+      line-height: 0.8;
+      color: #0f0;
+      user-select: none;
+      transform: translateY(-4px);
+    }
+    .status-area {
+      margin-top: 40px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .msg {
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      letter-spacing: 2px;
+    }
+    .msg.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #msg-loading {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    #msg-security {
+      font-size: 16px;
+      font-weight: normal;
+      color: #7cfc00;
+      letter-spacing: 1.5px;
+    }
+    #msg-redirect {
+      font-size: 15px;
+      color: #39ff14;
+      font-style: italic;
+    }
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 16px;
+      background-color: #0f0;
+      margin-left: 5px;
+      vertical-align: middle;
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.25), inset 0 0 15px rgba(0, 255, 0, 0.15);
+      }
+      100% {
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.6), inset 0 0 25px rgba(0, 255, 0, 0.4);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <span>V</span>
+    </div>
 
-    // Interactive highlight in nav links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
+    <div class="status-area">
+      <!-- 1. loading... (depois de 2.5s) -->
+      <div id="msg-loading" class="msg">loading...</div>
+
+      <!-- 2. checking security... (5s após loading) -->
+      <div id="msg-security" class="msg">checking security...</div>
+
+      <!-- 3. redirecting... (3s após checking security) -->
+      <div id="msg-redirect" class="msg">redirecting...<span class="cursor"></span></div>
+    </div>
+  </div>
+
+  <script>
+    // Defina o link de redirecionamento aqui:
+const REDIRECT_URL = "page.html";
+window.location.replace(REDIRECT_URL);
+
+
+    // 1. Ao entrar na página, após 2.5 segundos (2500ms): mostra "loading..."
+    setTimeout(() => {
+      document.getElementById('msg-loading').classList.add('visible');
+
+      // 2. Depois de mais 5 segundos (5000ms): mostra "checking security..."
+      setTimeout(() => {
+        document.getElementById('msg-security').classList.add('visible');
+
+        // 3. Depois de mais 3 segundos (3000ms): mostra "redirecting..."
+        setTimeout(() => {
+          document.getElementById('msg-redirect').classList.add('visible');
+
+          // 4. Depois de mais 1.5 segundos (1500ms): redireciona
+          setTimeout(() => {
+            if (REDIRECT_URL && REDIRECT_URL !== "#") {
+              window.location.href = REDIRECT_URL;
+            } else {
+              console.log("Redirecionamento acionado para:", REDIRECT_URL);
+            }
+          }, 1500);
+
+        }, 3000);
+
+      }, 5000);
+
+    }, 2500);
   </script>
-</div></main><footer class="w-full bg-surface-container-lowest py-space-3xl"><div class="w-full px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-xl"><div class="flex flex-col gap-space-2xs text-center md:text-left"><span class="font-headline-sm text-headline-sm text-primary-fixed">Lido e Relido</span><p class="font-body-sm text-body-sm text-on-surface-variant">Plataforma inteligente de intercâmbio de livros escolares com assistência canina cibernética.</p></div><div class="flex items-center gap-space-md text-center"><span class="font-label-sm text-label-sm text-outline-variant">© 2024 Lido e Relido. Powered by Fibo Companion Module.</span></div></div></footer>
-
-</body></html>
+</body>
+</html>
